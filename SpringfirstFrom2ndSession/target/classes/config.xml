@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+   <bean class="com.krishna.model.Student" name="std">
+   <property name="id">
+   <value>101</value>
+   </property>
+    <property name="name">
+   <value>"Rupesh kumar"</value>
+   </property>
+    <property name="address">
+   <value>"muzaffarpur"</value>
+   </property>
+   </bean>
+   
+   <bean class="com.krishna.constructorInjection.Address" name="add">
+   <constructor-arg value="balatand"></constructor-arg>
+   </bean>
+   <bean class="com.krishna.constructorInjection.Person" name="pern">
+   <constructor-arg value="1"></constructor-arg>
+   <constructor-arg value="sakshi"></constructor-arg>
+   <constructor-arg ref="add"></constructor-arg>
+   </bean>
+   
+   
+
+</beans>

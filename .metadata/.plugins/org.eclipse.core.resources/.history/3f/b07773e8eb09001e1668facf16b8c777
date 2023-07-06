@@ -1,0 +1,30 @@
+package com.krishna.main.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.krishna.main.entity.Employee;
+import com.krishna.main.service.EmployeeServiceImpl;
+
+@RestController
+public class EmpController {
+
+	@Autowired
+	private EmployeeServiceImpl service;
+	
+	@RequestMapping("/check")
+	public String myMethod() {
+		return "my method working";
+	}
+	
+	//@RequestMapping(method = RequestMethod.POST,value="/addEmp")
+	@PostMapping("/addEmp")
+	public void add(@RequestBody Employee emp) {
+		service.addEmployee(emp);
+	}
+	
+}

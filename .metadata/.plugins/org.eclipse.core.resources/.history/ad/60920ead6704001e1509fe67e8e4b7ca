@@ -1,0 +1,26 @@
+package com.krishna.main;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ConfigurableApplicationContext;
+
+import com.krishna.entity.Learner;
+import com.krishna.repo.LearnerRepository;
+
+@SpringBootApplication
+public class SpringBootDemo2Application {
+
+	public static void main(String[] args) {
+		ConfigurableApplicationContext context = 
+				SpringApplication.run(SpringBootDemo2Application.class, args);
+		 LearnerRepository rep = context.getBean(LearnerRepository.class);
+		 
+		 Learner l=new Learner();
+		 l.setName("sakshi jha");
+		 l.setCity("faridabad");
+		 
+		 Learner la = rep.save(l);
+		 System.out.println(la);
+	}
+
+}

@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Bootstrap 2nd method</title>
+<link th:href="@{/css/bootstrapNew.css}" rel="stylesheet">
+</head>
+<body>
+
+</body>
+</html>

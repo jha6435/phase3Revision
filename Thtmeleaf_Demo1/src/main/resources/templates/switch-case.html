@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" 
+integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" 
+crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+<div class="row">
+		<h1> thymeleaf switch case demo</h1>
+		<h4 th:utext="${user.username}"></h4>
+			<div th:switch="${user.role}">
+				<p th:case="'Admin'">user is an administrator<p>
+				<p th:case="'Manager'">user is an manager<p>
+				<p th:case="'guest'">user is an guest<p>
+				<p th:case="*">user is something other<p>
+			</div>
+		</div>
+</div>
+</body>
+</html>

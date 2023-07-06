@@ -1,0 +1,18 @@
+package com.krishna.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+
+@Controller
+public class HomeController {
+	
+	@GetMapping("/IcinHome")
+	public String home() {
+		return "IcinHome";
+	}
+
+	@GetMapping("/register")
+	public String sign() {
+		return "register";
+	}
+}
